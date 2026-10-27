@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="crimson">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Black Wolf - Advanced Downloader</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Greeting Overlay -->
+    <div id="greeting-overlay" class="overlay">
+        <div class="overlay-content">
+            <h1>BLACK WOLFS GREETINGS</h1>
+            <p>Welcome to the shadows.</p>
+            <button id="enter-btn">Enter Site</button>
+        </div>
+    </div>
+
+    <!-- Main Container -->
+    <div class="container">
+        <header>
+            <div class="header-top">
+                <h1 class="logo">🐺 Black Wolf</h1>
+                <button id="theme-toggle" title="Switch Theme">🌙 Cyan Mode</button>
+            </div>
+            <p class="tagline">Save your favorite media instantly</p>
+        </header>
+
+        <main>
+            <!-- URL Input Section -->
+            <div class="input-box">
+                <input type="text" id="media-url" placeholder="Paste link here (e.g., https://...)" autocomplete="off">
+                <button id="process-btn">Process</button>
+            </div>
+
+            <!-- Loading Progress Bar (Hidden initially) -->
+            <div id="loader-section" class="loader-section hidden">
+                <p id="loader-status">Fetching media info...</p>
+                <div class="progress-bar">
+                    <div id="progress-fill"></div>
+                </div>
+            </div>
+
+            <!-- Results Section (Hidden initially) -->
+            <div id="result-section" class="result-section hidden">
+                <div class="media-card">
+                    <div class="media-preview">
+                        <div class="thumbnail-placeholder">🎬</div>
+                        <div class="media-info">
+                            <h4 id="media-title">Black Wolf Exclusive Video</h4>
+                            <p id="media-duration">Duration: 00:45 | Source: Verified</p>
+                        </div>
+                    </div>
+                    <div class="button-group">
+                        <button id="download-mp4" class="action-btn">Download MP4 (HD Video)</button>
+                        <button id="download-mp3" class="action-btn">Download MP3 (Audio)</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recent Downloads History -->
+            <div class="history-section">
+                <h4>Recent Activity</h4>
+                <ul id="history-list">
+                    <li class="empty-history">No downloads yet...</li>
+                </ul>
+            </div>
+        </main>
+    </div>
+
+    <!-- Prank Popup Modal -->
+    <div id="prank-modal" class="modal hidden">
+        <div class="modal-content">
+            <span id="close-modal" class="close">&times;</span>
+            <h2>Gotcha!</h2>
+            <p id="prank-message">Take a moment to think about your life, arent you poor enogh!!!</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
